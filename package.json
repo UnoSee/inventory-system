@@ -16,7 +16,8 @@
     "sql.js": "^1.10.3"
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1"
+    "copyfiles": "^2.4.1",
+    "pkg": "^5.8.1"
   },
   "pkg": {
     "assets": [
@@ -24,7 +25,6 @@
       "sql-wasm.wasm"
     ],
     "targets": [
-      "node18-win-x64",
       "node18-linux-x64"
     ],
     "outputPath": "dist"
