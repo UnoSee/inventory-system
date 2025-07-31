@@ -1,0 +1,31 @@
+Of course. Here is a summary of the project that you can use to continue in a new chat.
+
+---
+
+**Project Summary:**
+
+I am building a self-hosted inventory management system. The goal is to track items (like laptops), manage their users, condition, and transfer dates, and generate printable stickers with QR codes for each item.
+
+**Current Technology Stack:**
+* **Backend:** Node.js with the Express framework.
+* **Database:** SQLite (self-hosted, file-based).
+* **Frontend:** A single `index.html` file using Tailwind CSS and vanilla JavaScript.
+
+**Project Files:**
+The project consists of four main files:
+1.  `package.json`: Defines the project and its Node.js dependencies (`express`, `sqlite`, `sqlite3`, `cors`).
+2.  `server.js`: The Express server that defines the API routes (`GET`, `POST`, `PUT`, `DELETE`) for interacting with the inventory.
+3.  `database.js`: A module that handles all the SQLite database operations (initializing the DB, creating the table, and running queries).
+4.  `index.html`: The user interface for adding, viewing, editing, and deleting items.
+
+**Key Features Implemented:**
+* Adding new items to the inventory.
+* Displaying a list of all inventory items.
+* Deleting items from the list.
+* A "Notes" field for each item.
+* An "Edit" button that opens a modal to update an item's details.
+* A "Sticker" button that generates a printable sticker with the item's details, a QR code, and a specific brand logo (`JARISK-Black.png`).
+* The sticker layout has been refined multiple times to prevent text from overflowing or being misaligned.
+
+**Current Status:**
+We have just finished building the backend and connecting it to the frontend. The last feature we worked on was implementing the "update item" functionality, which involved creating a `PUT` route on the server and a corresponding edit form on the frontend. The most recent problem was a server error (`Cannot PUT /api/inventory/:id`) which was fixed by ensuring the `server.js` file contained the correct `app.put(...)` route definition.

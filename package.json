@@ -1,0 +1,32 @@
+{
+  "name": "inventory-system",
+  "version": "1.0.0",
+  "description": "A simple inventory system with a Node.js backend and SQLite database.",
+  "main": "server.js",
+  "bin": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "prebuild": "copyfiles -u 1 \"node_modules/sql.js/dist/sql-wasm.wasm\" .",
+    "build": "npm run prebuild && pkg ."
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "sql.js": "^1.10.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  },
+  "pkg": {
+    "assets": [
+      "index.html",
+      "sql-wasm.wasm"
+    ],
+    "targets": [
+      "node18-win-x64",
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
